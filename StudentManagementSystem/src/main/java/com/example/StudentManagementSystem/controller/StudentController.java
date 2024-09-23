@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController//creating rest api's
-@RequestMapping("/student")
 public class StudentController
 {
     @Autowired
     StudentService studentService;
+    
     @PostMapping("/create")
     public Student createStudent(@RequestBody @Valid CreateStudentRequest createStudentRequest)
     {
